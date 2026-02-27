@@ -62,14 +62,25 @@ async function trainModel(inputXs, outputYs) {
             epochs: 100, // quantidade de vezes que passa pela base de treino
             shuffle: true, // embaralha a base de treino
             callbacks: {
-                onEpochEnd: (epoch, logs) => {
-                    console.log(`Epoch ${epoch} - Loss: ${logs.loss}`);
-                }
+                // onEpochEnd: (epoch, logs) => {
+                //     console.log(`Epoch ${epoch} - Loss: ${logs.loss}`);
+                // }
             }
         }
     )
 
     return model;
+}
+
+async function predict(model, pessoa){
+    // transformar o array js  para o tensor
+    const tfInput = tf.tensor2d(pessoa);
+
+    // faz a predição (output sera um vetor de 3 probabilidades)
+    const pred = model.predict(tfInput);
+    const predArray = await pred.array();
+
+    return predArray[0].map((prob, index) => ({prob, index}));
 }
 
 // Exemplo de pessoas para treino (cada pessoa com idade, cor e localização)
@@ -111,4 +122,26 @@ const outputYs = tf.tensor2d(tensorLabels)
 
 // Quanto mais dados, melhor
 // assim o modelo entende melhor o padrão complexos dos dados
-const model = trainModel(inputXs, outputYs);
+const model = await trainModel(inputXs, outputYs);
+
+const pessoa = { nome: "Julio", idade: 28, cor: "vermelho", localizacao: "São Paulo" };
+
+const pessoaTensorNormalizado = [
+    [
+        0.2, // idade normalizada
+        0, // azul
+        0, // vermelho
+        1, // verde
+        0, // São Paulo
+        0, // Rio
+        1 // Curitiba
+    ]
+];
+
+const predictions = await predict(model, pessoaTensorNormalizado);
+const results = predictions
+    .sort((a,b) => b.prob - a.prob)
+    .map(p => `${labelsNomes[p.index]} (${(p.prob * 100).toFixed(2)}%)`)
+    .join('\n');
+
+console.log(results);
