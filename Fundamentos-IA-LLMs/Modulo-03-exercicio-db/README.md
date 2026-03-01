@@ -144,7 +144,7 @@ CREATE TABLE product_vectors (
     category VARCHAR(100),
     price DECIMAL(10, 2),
     color VARCHAR(50),
-    vector vector,  -- pgvector type
+    vector vector(14),  -- pgvector type
     context JSONB,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
