@@ -1,26 +1,30 @@
-# E-commerce Recommendation System
+# 🛒 Sistema de Recomendação para E-commerce
 
-A web application that displays user profiles and product listings, with the ability to track user purchases for future machine learning recommendations using TensorFlow.js.
+Uma aplicação web que exibe perfis de usuários e listagem de produtos, com capacidade de registrar compras para gerar recomendações futuras utilizando **TensorFlow.js**.
 
-**🚀 Versão com Banco de Dados**: Esta versão utiliza PostgreSQL com pgvector para armazenar vetores de produtos e realizar buscas por similaridade vetorial, simulando um ambiente de produção.
+**🚀 Versão com Banco de Dados:** Esta versão utiliza **PostgreSQL** com **pgvector** para armazenar vetores de produtos e realizar buscas por similaridade vetorial, simulando um ambiente de produção.
 
-## Project Structure
+---
 
-- `index.html` - Main HTML file for the application
-- `src/` - Source code directory
-  - `index.js` - Entry point for the application
-  - `view/` - Contains classes for managing the DOM and templates
-  - `controller/` - Contains controllers to connect views and services
-  - `service/` - Contains business logic for data handling
-    - `DatabaseService.js` - Serviço para comunicação com a API backend
-  - `workers/` - Web Workers para processamento pesado
-    - `modelTrainingWorker.js` - Worker para treinamento do modelo ML e recomendações
-- `backend/` - Backend API server
-  - `server.js` - Express server com endpoints para PostgreSQL/pgvector
-- `data/` - Contains JSON files with user and product data
-- `docker-compose.yml` - Configuração do PostgreSQL com pgvector
+## 📁 Estrutura do Projeto
 
-## Setup and Run
+- `index.html` – Arquivo HTML principal da aplicação  
+- `src/` – Código-fonte da aplicação  
+  - `index.js` – Ponto de entrada  
+  - `view/` – Classes para manipulação do DOM e templates  
+  - `controller/` – Controladores conectando views aos serviços  
+  - `service/` – Lógica de negócio e manipulação de dados  
+    - `DatabaseService.js` – Serviço para comunicação com a API backend  
+  - `workers/` – Web Workers para processamento pesado  
+    - `modelTrainingWorker.js` – Worker para treinamento do modelo e recomendações  
+- `backend/` – Servidor da API  
+  - `server.js` – Servidor Express com endpoints para PostgreSQL + pgvector  
+- `data/` – Arquivos JSON com dados de usuários e produtos  
+- `docker-compose.yml` – Configuração do PostgreSQL com pgvector  
+
+---
+
+## ⚙️ Configuração e Execução
 
 ### Pré-requisitos
 
