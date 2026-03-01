@@ -1,4 +1,4 @@
-## Módulo 02 – Classificação de Planos com TensorFlow.js
+## Módulo 02 – Criando minha primeira rede neural para classificação de planos com TensorFlow.js
 
 Este módulo implementa, em Node.js com `@tensorflow/tfjs-node`, um exemplo completo de rede neural para **classificar planos** (`premium`, `medium`, `basic`) a partir de características de pessoas (idade, cor favorita e cidade).
 
