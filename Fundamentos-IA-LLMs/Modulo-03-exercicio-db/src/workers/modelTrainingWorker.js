@@ -1,9 +1,10 @@
 import 'https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.22.0/dist/tf.min.js';
 import { workerEvents } from '../events/constants.js';
+import { DatabaseService } from '../service/DatabaseService.js';
 
 console.log('Model training worker initialized');
-let _globalCtx = {};
 let _model = null;
+let _dbService = new DatabaseService();
 
 const WEIGHTS = {
     category: 0.4,
@@ -283,84 +284,174 @@ async function configureNeuralNetAndTrain(trainData) {
 async function trainModel({ users }) {
     console.log('Training model with users:', users)
 
-    postMessage({ type: workerEvents.progressUpdate, progress: { progress: 50 } });
+    postMessage({ type: workerEvents.progressUpdate, progress: { progress: 10 } });
+
+    // Limpar vetores anteriores do banco
+    try {
+        await _dbService.clearAllVectors();
+        console.log('✅ Cleared previous vectors from database');
+    } catch (error) {
+        console.warn('⚠️ Could not clear vectors (might be first run):', error);
+    }
+
+    postMessage({ type: workerEvents.progressUpdate, progress: { progress: 20 } });
 
     const products = await (await fetch('/data/products.json')).json();
     const context = makeContext(products, users);
 
-    context.productVectors = products.map(product => {
-        return {
-            name: product.name,
-            meta: {...product},
-            vector: encodeProduct(product, context).dataSync()
-        }
-    });
+    
+    postMessage({ type: workerEvents.progressUpdate, progress: { progress: 30 } });
 
-    _globalCtx = context;
+    // Salvar contexto no banco de dados
+    try {
+        await fetch('http://localhost:3001/api/context', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ context })
+        });
+        console.log('✅ Context saved to database');
+    } catch (error) {
+        console.error('❌ Error saving context:', error);
+    }
+
+    postMessage({ type: workerEvents.progressUpdate, progress: { progress: 40 } });
+
+    // Codificar e salvar vetores de produtos no banco de dados
+    console.log('📦 Encoding and saving product vectors to database...');
+    let savedCount = 0;
+    const totalProducts = products.length;
+
+    for (const product of products) {
+        try {
+            const vector = Array.from(encodeProduct(product, context).dataSync());
+            await _dbService.saveProductVector(product, vector, context);
+            savedCount++;
+            
+            if (savedCount % 10 === 0) {
+                const progress = 40 + Math.floor((savedCount / totalProducts) * 20);
+                postMessage({ type: workerEvents.progressUpdate, progress: { progress } });
+            }
+        } catch (error) {
+            console.error(`❌ Error saving vector for product ${product.id}:`, error);
+        }
+    }
+
+    console.log(`✅ Saved ${savedCount}/${totalProducts} product vectors to database`);
+
+    postMessage({ type: workerEvents.progressUpdate, progress: { progress: 60 } });
 
     const trainData = createTrainingData(context);
 
-    _model =  await configureNeuralNetAndTrain(trainData);
+    postMessage({ type: workerEvents.progressUpdate, progress: { progress: 70 } });
+
+    _model = await configureNeuralNetAndTrain(trainData);
 
     postMessage({ type: workerEvents.progressUpdate, progress: { progress: 100 } });
     postMessage({ type: workerEvents.trainingComplete });
 }
-function recommend(user, ctx) {
-    if (!_model) return;
+async function recommend(user, ctx) {
+    if (!_model) {
+        console.warn('⚠️ Model not trained yet');
+        return;
+    }
 
-    const context = _globalCtx;
-
-    // 1️⃣ Converta o usuário fornecido no vetor de features codificadas
-    //    (preço ignorado, idade normalizada, categorias ignoradas)
-    //    Isso transforma as informações do usuário no mesmo formato numérico
-    //    que foi usado para treinar o modelo.
-    const userVector = encodeUser(user, context).dataSync();
-
-    // Em aplicações reais:
-    //  Armazene todos os vetores de produtos em um banco de dados vetorial (como Postgres, Neo4j ou Pinecone)
-    //  Consulta: Encontre os 200 produtos mais próximos do vetor do usuário
-    //  Execute _model.predict() apenas nesses produtos
-
-    // 2️⃣ Crie pares de entrada: para cada produto, concatene o vetor do usuário
-    //    com o vetor codificado do produto.
-    //    Por quê? O modelo prevê o "score de compatibilidade" para cada par (usuário, produto).
-    const inputs = context.productVectors.map(({vector})=>{
-        return [ ...userVector, ...vector]
-    })
-
-    // 3️⃣ Converta todos esses pares (usuário, produto) em um único Tensor.
-    //    Formato: [numProdutos, inputDim]
-    const inputTensor = tf.tensor2d(inputs);
-
-    // 4️⃣ Rode a rede neural treinada em todos os pares (usuário, produto) de uma vez.
-    //    O resultado é uma pontuação para cada produto entre 0 e 1.
-    //    Quanto maior, maior a probabilidade do usuário querer aquele produto.
-    const predictons = _model.predict(inputTensor)
-
-    // 5️⃣ Extraia as pontuações para um array JS normal.
-    const scores = predictons.dataSync();
-
-    const recommendations = context.productVectors.map((item, index) => {
-        return {
-            ...item.meta,
-            name: item.name,
-            score: scores[index] // previsão do modelo para este produto
+    try {
+        // 1️⃣ Carregar contexto do banco de dados (ambiente de produção)
+        const context = await _dbService.getContext();
+        
+        if (!context) {
+            console.error('❌ Context not found in database. Please train the model first.');
+            postMessage({
+                type: workerEvents.recommend,
+                user,
+                recommendations: [],
+                error: 'Model not trained. Please train the model first.'
+            });
+            return;
         }
-    })
 
-    const sortedItems = recommendations.sort((a, b) => b.score - a.score)
-    
-    // 8️⃣ Envie a lista ordenada de produtos recomendados
-    //    para a thread principal (a UI pode exibi-los agora).
-    postMessage({
-        type: workerEvents.recommend,
-        user,
-        recommendations: sortedItems
-    });
+        // 2️⃣ Converter o usuário fornecido no vetor de features codificadas
+        //    (preço ignorado, idade normalizada, categorias ignoradas)
+        //    Isso transforma as informações do usuário no mesmo formato numérico
+        //    que foi usado para treinar o modelo.
+        const userVector = Array.from(encodeUser(user, context).dataSync());
+
+        // 3️⃣ Buscar os 100 produtos mais próximos do vetor do usuário usando busca vetorial
+        //    Isso simula um ambiente de produção onde não carregamos todos os produtos na memória
+        console.log('🔍 Searching for 100 most similar products in database...');
+        const similarProducts = await _dbService.findSimilarProducts(userVector, 100);
+        
+        if (similarProducts.length === 0) {
+            console.warn('⚠️ No similar products found in database');
+            postMessage({
+                type: workerEvents.recommend,
+                user,
+                recommendations: []
+            });
+            return;
+        }
+
+        console.log(`✅ Found ${similarProducts.length} similar products`);
+
+        // 4️⃣ Criar pares de entrada: para cada produto similar, concatenar o vetor do usuário
+        //    com o vetor codificado do produto.
+        //    Por quê? O modelo prevê o "score de compatibilidade" para cada par (usuário, produto).
+        const inputs = similarProducts.map(({ vector }) => {
+            return [...userVector, ...vector];
+        });
+
+        // 5️⃣ Converter todos esses pares (usuário, produto) em um único Tensor.
+        //    Formato: [numProdutos, inputDim]
+        const inputTensor = tf.tensor2d(inputs);
+
+        // 6️⃣ Rodar a rede neural treinada em todos os pares (usuário, produto) de uma vez.
+        //    O resultado é uma pontuação para cada produto entre 0 e 1.
+        //    Quanto maior, maior a probabilidade do usuário querer aquele produto.
+        const predictions = _model.predict(inputTensor);
+
+        // 7️⃣ Extrair as pontuações para um array JS normal.
+        const scores = predictions.dataSync();
+
+        // 8️⃣ Criar lista de recomendações com metadados e scores
+        const recommendations = similarProducts.map((item, index) => {
+            return {
+                id: item.id,
+                name: item.name,
+                category: item.category,
+                price: item.price,
+                color: item.color,
+                score: scores[index], // previsão do modelo para este produto
+                similarity: item.similarity // similaridade vetorial (0-1)
+            };
+        });
+
+        // 9️⃣ Ordenar por score do modelo (maior = melhor recomendação)
+        const sortedItems = recommendations.sort((a, b) => b.score - a.score);
+
+        console.log(`✅ Generated ${sortedItems.length} recommendations`);
+
+        // 🔟 Enviar a lista ordenada de produtos recomendados
+        //     para a thread principal (a UI pode exibi-los agora).
+        postMessage({
+            type: workerEvents.recommend,
+            user,
+            recommendations: sortedItems
+        });
+    } catch (error) {
+        console.error('❌ Error in recommend function:', error);
+        postMessage({
+            type: workerEvents.recommend,
+            user,
+            recommendations: [],
+            error: error.message
+        });
+    }
 }
 const handlers = {
     [workerEvents.trainModel]: trainModel,
-    [workerEvents.recommend]: d => recommend(d.user, _globalCtx),
+    [workerEvents.recommend]: d => recommend(d.user),
 };
 
 self.onmessage = e => {

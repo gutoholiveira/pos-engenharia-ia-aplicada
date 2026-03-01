@@ -6,6 +6,8 @@
     "type": "module",
     "scripts": {
         "start": "browser-sync -w . --server --files 'index.html, data/*.json, js/*.js' --port 3000",
+        "start:backend": "node backend/server.js",
+        "start:all": "concurrently \"npm run start:backend\" \"npm run start\"",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [
@@ -16,7 +18,14 @@
     ],
     "author": "",
     "license": "ISC",
+    "dependencies": {
+        "express": "^4.18.2",
+        "cors": "^2.8.5",
+        "pg": "^8.11.3",
+        "dotenv": "^16.3.1"
+    },
     "devDependencies": {
-        "browser-sync": "^3.0.4"
+        "browser-sync": "^3.0.4",
+        "concurrently": "^8.2.2"
     }
 }
