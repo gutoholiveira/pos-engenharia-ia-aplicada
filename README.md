@@ -7,8 +7,9 @@ Este repositório documenta a evolução técnica, prática e arquitetural na co
 - [Fundamentos de IA e LLMs para Programadores](https://github.com/gutoholiveira/pos-engenharia-ia-aplicada/tree/main/Fundamentos-IA-LLMs)
 
 # 🚀 Tecnologias Utilizadas
-  - [Node.js](https://nodejs.org/pt-br)
+  - [Node.js](https://nodejs.org/pt-br) + [Express.js](https://expressjs.com/pt-br/)
   - [Tensorflow.js](https://www.tensorflow.org/?hl=pt-br)
+  - [Postgres](https://www.postgresql.org/) + [pgvector](https://www.postgresql.org/about/news/pgvector-080-released-2952/)
 
 # 📈 Evolução Técnica
 Este repositório também serve como:
