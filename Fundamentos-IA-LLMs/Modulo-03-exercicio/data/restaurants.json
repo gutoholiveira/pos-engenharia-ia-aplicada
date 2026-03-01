@@ -1,0 +1,1751 @@
+[
+    {
+        "id": 1,
+        "name": "Restaurante Sabor Brasileiro",
+        "capacity": 80,
+        "consumption": [
+            {
+                "id": 1,
+                "name": "Arroz",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 150,
+                "month": "2024-01"
+            },
+            {
+                "id": 1,
+                "name": "Arroz",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 118,
+                "month": "2024-02"
+            },
+            {
+                "id": 1,
+                "name": "Arroz",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 126,
+                "month": "2024-03"
+            },
+            {
+                "id": 1,
+                "name": "Arroz",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 147,
+                "month": "2024-04"
+            },
+            {
+                "id": 1,
+                "name": "Arroz",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 126,
+                "month": "2024-05"
+            },
+            {
+                "id": 1,
+                "name": "Arroz",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 121,
+                "month": "2024-06"
+            },
+            {
+                "id": 1,
+                "name": "Arroz",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 107,
+                "month": "2024-07"
+            },
+            {
+                "id": 1,
+                "name": "Arroz",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 80,
+                "month": "2024-08"
+            },
+            {
+                "id": 1,
+                "name": "Arroz",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 85,
+                "month": "2024-09"
+            },
+            {
+                "id": 1,
+                "name": "Arroz",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 124,
+                "month": "2024-10"
+            },
+            {
+                "id": 1,
+                "name": "Arroz",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 146,
+                "month": "2024-11"
+            },
+            {
+                "id": 1,
+                "name": "Arroz",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 124,
+                "month": "2024-12"
+            },
+            {
+                "id": 1,
+                "name": "Arroz",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 158,
+                "month": "2025-01"
+            },
+            {
+                "id": 1,
+                "name": "Arroz",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 82,
+                "month": "2025-02"
+            },
+            {
+                "id": 1,
+                "name": "Arroz",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 120,
+                "month": "2025-03"
+            },
+            {
+                "id": 1,
+                "name": "Arroz",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 132,
+                "month": "2025-04"
+            },
+            {
+                "id": 1,
+                "name": "Arroz",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 119,
+                "month": "2025-05"
+            },
+            {
+                "id": 1,
+                "name": "Arroz",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 111,
+                "month": "2025-06"
+            },
+            {
+                "id": 1,
+                "name": "Arroz",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 114,
+                "month": "2025-07"
+            },
+            {
+                "id": 1,
+                "name": "Arroz",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 116,
+                "month": "2025-08"
+            },
+            {
+                "id": 1,
+                "name": "Arroz",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 116,
+                "month": "2025-09"
+            },
+            {
+                "id": 1,
+                "name": "Arroz",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 142,
+                "month": "2025-10"
+            },
+            {
+                "id": 1,
+                "name": "Arroz",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 137,
+                "month": "2025-11"
+            },
+            {
+                "id": 1,
+                "name": "Arroz",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 112,
+                "month": "2025-12"
+            },
+            {
+                "id": 2,
+                "name": "Feijão",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 76,
+                "month": "2024-01"
+            },
+            {
+                "id": 2,
+                "name": "Feijão",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 49,
+                "month": "2024-02"
+            },
+            {
+                "id": 2,
+                "name": "Feijão",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 52,
+                "month": "2024-03"
+            },
+            {
+                "id": 2,
+                "name": "Feijão",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 52,
+                "month": "2024-04"
+            },
+            {
+                "id": 2,
+                "name": "Feijão",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 71,
+                "month": "2024-05"
+            },
+            {
+                "id": 2,
+                "name": "Feijão",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 76,
+                "month": "2024-06"
+            },
+            {
+                "id": 2,
+                "name": "Feijão",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 87,
+                "month": "2024-07"
+            },
+            {
+                "id": 2,
+                "name": "Feijão",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 59,
+                "month": "2024-08"
+            },
+            {
+                "id": 2,
+                "name": "Feijão",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 63,
+                "month": "2024-09"
+            },
+            {
+                "id": 2,
+                "name": "Feijão",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 42,
+                "month": "2024-10"
+            },
+            {
+                "id": 2,
+                "name": "Feijão",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 71,
+                "month": "2024-11"
+            },
+            {
+                "id": 2,
+                "name": "Feijão",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 71,
+                "month": "2024-12"
+            },
+            {
+                "id": 2,
+                "name": "Feijão",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 45,
+                "month": "2025-01"
+            },
+            {
+                "id": 2,
+                "name": "Feijão",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 38.1,
+                "month": "2025-02"
+            },
+            {
+                "id": 2,
+                "name": "Feijão",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 57,
+                "month": "2025-03"
+            },
+            {
+                "id": 2,
+                "name": "Feijão",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 48.5,
+                "month": "2025-04"
+            },
+            {
+                "id": 2,
+                "name": "Feijão",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 80,
+                "month": "2025-05"
+            },
+            {
+                "id": 2,
+                "name": "Feijão",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 52,
+                "month": "2025-06"
+            },
+            {
+                "id": 2,
+                "name": "Feijão",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 44.5,
+                "month": "2025-07"
+            },
+            {
+                "id": 2,
+                "name": "Feijão",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 43,
+                "month": "2025-08"
+            },
+            {
+                "id": 2,
+                "name": "Feijão",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 64,
+                "month": "2025-09"
+            },
+            {
+                "id": 2,
+                "name": "Feijão",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 43,
+                "month": "2025-10"
+            },
+            {
+                "id": 2,
+                "name": "Feijão",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 39,
+                "month": "2025-11"
+            },
+            {
+                "id": 2,
+                "name": "Feijão",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 89.5,
+                "month": "2025-12"
+            },
+            {
+                "id": 3,
+                "name": "Carne Bovina",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 93,
+                "month": "2024-01"
+            },
+            {
+                "id": 3,
+                "name": "Carne Bovina",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 127,
+                "month": "2024-02"
+            },
+            {
+                "id": 3,
+                "name": "Carne Bovina",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 83,
+                "month": "2024-03"
+            },
+            {
+                "id": 3,
+                "name": "Carne Bovina",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 145,
+                "month": "2024-04"
+            },
+            {
+                "id": 3,
+                "name": "Carne Bovina",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 140,
+                "month": "2024-05"
+            },
+            {
+                "id": 3,
+                "name": "Carne Bovina",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 124,
+                "month": "2024-06"
+            },
+            {
+                "id": 3,
+                "name": "Carne Bovina",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 90,
+                "month": "2024-07"
+            },
+            {
+                "id": 3,
+                "name": "Carne Bovina",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 120,
+                "month": "2024-08"
+            },
+            {
+                "id": 3,
+                "name": "Carne Bovina",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 91,
+                "month": "2024-09"
+            },
+            {
+                "id": 3,
+                "name": "Carne Bovina",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 80,
+                "month": "2024-10"
+            },
+            {
+                "id": 3,
+                "name": "Carne Bovina",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 143,
+                "month": "2024-11"
+            },
+            {
+                "id": 3,
+                "name": "Carne Bovina",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 83,
+                "month": "2024-12"
+            },
+            {
+                "id": 3,
+                "name": "Carne Bovina",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 110.1,
+                "month": "2025-01"
+            },
+            {
+                "id": 3,
+                "name": "Carne Bovina",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 81,
+                "month": "2025-02"
+            },
+            {
+                "id": 3,
+                "name": "Carne Bovina",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 127,
+                "month": "2025-03"
+            },
+            {
+                "id": 3,
+                "name": "Carne Bovina",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 84,
+                "month": "2025-04"
+            },
+            {
+                "id": 3,
+                "name": "Carne Bovina",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 80,
+                "month": "2025-05"
+            },
+            {
+                "id": 3,
+                "name": "Carne Bovina",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 104.0,
+                "month": "2025-06"
+            },
+            {
+                "id": 3,
+                "name": "Carne Bovina",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 125,
+                "month": "2025-07"
+            },
+            {
+                "id": 3,
+                "name": "Carne Bovina",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 127,
+                "month": "2025-08"
+            },
+            {
+                "id": 3,
+                "name": "Carne Bovina",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 110,
+                "month": "2025-09"
+            },
+            {
+                "id": 3,
+                "name": "Carne Bovina",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 101,
+                "month": "2025-10"
+            },
+            {
+                "id": 3,
+                "name": "Carne Bovina",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 76,
+                "month": "2025-11"
+            },
+            {
+                "id": 3,
+                "name": "Carne Bovina",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 122,
+                "month": "2025-12"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Cantina Italiana",
+        "capacity": 60,
+        "consumption": [
+            {
+                "id": 1,
+                "name": "Arroz",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 48,
+                "month": "2024-01"
+            },
+            {
+                "id": 1,
+                "name": "Arroz",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 33,
+                "month": "2024-02"
+            },
+            {
+                "id": 1,
+                "name": "Arroz",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 70,
+                "month": "2024-03"
+            },
+            {
+                "id": 1,
+                "name": "Arroz",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 49,
+                "month": "2024-04"
+            },
+            {
+                "id": 1,
+                "name": "Arroz",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 47.2,
+                "month": "2024-05"
+            },
+            {
+                "id": 1,
+                "name": "Arroz",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 59.6,
+                "month": "2024-06"
+            },
+            {
+                "id": 1,
+                "name": "Arroz",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 62,
+                "month": "2024-07"
+            },
+            {
+                "id": 1,
+                "name": "Arroz",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 71,
+                "month": "2024-08"
+            },
+            {
+                "id": 1,
+                "name": "Arroz",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 49,
+                "month": "2024-09"
+            },
+            {
+                "id": 1,
+                "name": "Arroz",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 43,
+                "month": "2024-10"
+            },
+            {
+                "id": 1,
+                "name": "Arroz",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 74,
+                "month": "2024-11"
+            },
+            {
+                "id": 1,
+                "name": "Arroz",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 47,
+                "month": "2024-12"
+            },
+            {
+                "id": 1,
+                "name": "Arroz",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 59,
+                "month": "2025-01"
+            },
+            {
+                "id": 1,
+                "name": "Arroz",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 54,
+                "month": "2025-02"
+            },
+            {
+                "id": 1,
+                "name": "Arroz",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 67,
+                "month": "2025-03"
+            },
+            {
+                "id": 1,
+                "name": "Arroz",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 42,
+                "month": "2025-04"
+            },
+            {
+                "id": 1,
+                "name": "Arroz",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 72,
+                "month": "2025-05"
+            },
+            {
+                "id": 1,
+                "name": "Arroz",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 56,
+                "month": "2025-06"
+            },
+            {
+                "id": 1,
+                "name": "Arroz",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 45,
+                "month": "2025-07"
+            },
+            {
+                "id": 1,
+                "name": "Arroz",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 41,
+                "month": "2025-08"
+            },
+            {
+                "id": 1,
+                "name": "Arroz",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 46,
+                "month": "2025-09"
+            },
+            {
+                "id": 1,
+                "name": "Arroz",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 45,
+                "month": "2025-10"
+            },
+            {
+                "id": 1,
+                "name": "Arroz",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 53,
+                "month": "2025-11"
+            },
+            {
+                "id": 1,
+                "name": "Arroz",
+                "category": "grãos",
+                "unit": "kg",
+                "quantity": 39,
+                "month": "2025-12"
+            },
+            {
+                "id": 4,
+                "name": "Massa",
+                "category": "massas",
+                "unit": "kg",
+                "quantity": 156,
+                "month": "2024-01"
+            },
+            {
+                "id": 4,
+                "name": "Massa",
+                "category": "massas",
+                "unit": "kg",
+                "quantity": 169,
+                "month": "2024-02"
+            },
+            {
+                "id": 4,
+                "name": "Massa",
+                "category": "massas",
+                "unit": "kg",
+                "quantity": 162,
+                "month": "2024-03"
+            },
+            {
+                "id": 4,
+                "name": "Massa",
+                "category": "massas",
+                "unit": "kg",
+                "quantity": 204,
+                "month": "2024-04"
+            },
+            {
+                "id": 4,
+                "name": "Massa",
+                "category": "massas",
+                "unit": "kg",
+                "quantity": 193,
+                "month": "2024-05"
+            },
+            {
+                "id": 4,
+                "name": "Massa",
+                "category": "massas",
+                "unit": "kg",
+                "quantity": 161,
+                "month": "2024-06"
+            },
+            {
+                "id": 4,
+                "name": "Massa",
+                "category": "massas",
+                "unit": "kg",
+                "quantity": 124,
+                "month": "2024-07"
+            },
+            {
+                "id": 4,
+                "name": "Massa",
+                "category": "massas",
+                "unit": "kg",
+                "quantity": 151,
+                "month": "2024-08"
+            },
+            {
+                "id": 4,
+                "name": "Massa",
+                "category": "massas",
+                "unit": "kg",
+                "quantity": 147,
+                "month": "2024-09"
+            },
+            {
+                "id": 4,
+                "name": "Massa",
+                "category": "massas",
+                "unit": "kg",
+                "quantity": 196,
+                "month": "2024-10"
+            },
+            {
+                "id": 4,
+                "name": "Massa",
+                "category": "massas",
+                "unit": "kg",
+                "quantity": 216,
+                "month": "2024-11"
+            },
+            {
+                "id": 4,
+                "name": "Massa",
+                "category": "massas",
+                "unit": "kg",
+                "quantity": 203,
+                "month": "2024-12"
+            },
+            {
+                "id": 4,
+                "name": "Massa",
+                "category": "massas",
+                "unit": "kg",
+                "quantity": 148,
+                "month": "2025-01"
+            },
+            {
+                "id": 4,
+                "name": "Massa",
+                "category": "massas",
+                "unit": "kg",
+                "quantity": 149,
+                "month": "2025-02"
+            },
+            {
+                "id": 4,
+                "name": "Massa",
+                "category": "massas",
+                "unit": "kg",
+                "quantity": 193,
+                "month": "2025-03"
+            },
+            {
+                "id": 4,
+                "name": "Massa",
+                "category": "massas",
+                "unit": "kg",
+                "quantity": 221,
+                "month": "2025-04"
+            },
+            {
+                "id": 4,
+                "name": "Massa",
+                "category": "massas",
+                "unit": "kg",
+                "quantity": 231,
+                "month": "2025-05"
+            },
+            {
+                "id": 4,
+                "name": "Massa",
+                "category": "massas",
+                "unit": "kg",
+                "quantity": 186,
+                "month": "2025-06"
+            },
+            {
+                "id": 4,
+                "name": "Massa",
+                "category": "massas",
+                "unit": "kg",
+                "quantity": 199,
+                "month": "2025-07"
+            },
+            {
+                "id": 4,
+                "name": "Massa",
+                "category": "massas",
+                "unit": "kg",
+                "quantity": 201,
+                "month": "2025-08"
+            },
+            {
+                "id": 4,
+                "name": "Massa",
+                "category": "massas",
+                "unit": "kg",
+                "quantity": 125,
+                "month": "2025-09"
+            },
+            {
+                "id": 4,
+                "name": "Massa",
+                "category": "massas",
+                "unit": "kg",
+                "quantity": 173,
+                "month": "2025-10"
+            },
+            {
+                "id": 4,
+                "name": "Massa",
+                "category": "massas",
+                "unit": "kg",
+                "quantity": 198,
+                "month": "2025-11"
+            },
+            {
+                "id": 4,
+                "name": "Massa",
+                "category": "massas",
+                "unit": "kg",
+                "quantity": 148,
+                "month": "2025-12"
+            },
+            {
+                "id": 5,
+                "name": "Tomate",
+                "category": "vegetais",
+                "unit": "kg",
+                "quantity": 73,
+                "month": "2024-01"
+            },
+            {
+                "id": 5,
+                "name": "Tomate",
+                "category": "vegetais",
+                "unit": "kg",
+                "quantity": 72,
+                "month": "2024-02"
+            },
+            {
+                "id": 5,
+                "name": "Tomate",
+                "category": "vegetais",
+                "unit": "kg",
+                "quantity": 37,
+                "month": "2024-03"
+            },
+            {
+                "id": 5,
+                "name": "Tomate",
+                "category": "vegetais",
+                "unit": "kg",
+                "quantity": 78,
+                "month": "2024-04"
+            },
+            {
+                "id": 5,
+                "name": "Tomate",
+                "category": "vegetais",
+                "unit": "kg",
+                "quantity": 48,
+                "month": "2024-05"
+            },
+            {
+                "id": 5,
+                "name": "Tomate",
+                "category": "vegetais",
+                "unit": "kg",
+                "quantity": 57,
+                "month": "2024-06"
+            },
+            {
+                "id": 5,
+                "name": "Tomate",
+                "category": "vegetais",
+                "unit": "kg",
+                "quantity": 49,
+                "month": "2024-07"
+            },
+            {
+                "id": 5,
+                "name": "Tomate",
+                "category": "vegetais",
+                "unit": "kg",
+                "quantity": 63,
+                "month": "2024-08"
+            },
+            {
+                "id": 5,
+                "name": "Tomate",
+                "category": "vegetais",
+                "unit": "kg",
+                "quantity": 77,
+                "month": "2024-09"
+            },
+            {
+                "id": 5,
+                "name": "Tomate",
+                "category": "vegetais",
+                "unit": "kg",
+                "quantity": 62,
+                "month": "2024-10"
+            },
+            {
+                "id": 5,
+                "name": "Tomate",
+                "category": "vegetais",
+                "unit": "kg",
+                "quantity": 37,
+                "month": "2024-11"
+            },
+            {
+                "id": 5,
+                "name": "Tomate",
+                "category": "vegetais",
+                "unit": "kg",
+                "quantity": 38,
+                "month": "2024-12"
+            },
+            {
+                "id": 5,
+                "name": "Tomate",
+                "category": "vegetais",
+                "unit": "kg",
+                "quantity": 48,
+                "month": "2025-01"
+            },
+            {
+                "id": 5,
+                "name": "Tomate",
+                "category": "vegetais",
+                "unit": "kg",
+                "quantity": 65,
+                "month": "2025-02"
+            },
+            {
+                "id": 5,
+                "name": "Tomate",
+                "category": "vegetais",
+                "unit": "kg",
+                "quantity": 64,
+                "month": "2025-03"
+            },
+            {
+                "id": 5,
+                "name": "Tomate",
+                "category": "vegetais",
+                "unit": "kg",
+                "quantity": 80,
+                "month": "2025-04"
+            },
+            {
+                "id": 5,
+                "name": "Tomate",
+                "category": "vegetais",
+                "unit": "kg",
+                "quantity": 85,
+                "month": "2025-05"
+            },
+            {
+                "id": 5,
+                "name": "Tomate",
+                "category": "vegetais",
+                "unit": "kg",
+                "quantity": 64,
+                "month": "2025-06"
+            },
+            {
+                "id": 5,
+                "name": "Tomate",
+                "category": "vegetais",
+                "unit": "kg",
+                "quantity": 74,
+                "month": "2025-07"
+            },
+            {
+                "id": 5,
+                "name": "Tomate",
+                "category": "vegetais",
+                "unit": "kg",
+                "quantity": 83,
+                "month": "2025-08"
+            },
+            {
+                "id": 5,
+                "name": "Tomate",
+                "category": "vegetais",
+                "unit": "kg",
+                "quantity": 91,
+                "month": "2025-09"
+            },
+            {
+                "id": 5,
+                "name": "Tomate",
+                "category": "vegetais",
+                "unit": "kg",
+                "quantity": 66,
+                "month": "2025-10"
+            },
+            {
+                "id": 5,
+                "name": "Tomate",
+                "category": "vegetais",
+                "unit": "kg",
+                "quantity": 89,
+                "month": "2025-11"
+            },
+            {
+                "id": 5,
+                "name": "Tomate",
+                "category": "vegetais",
+                "unit": "kg",
+                "quantity": 51,
+                "month": "2025-12"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Churrascaria Gaúcha",
+        "capacity": 120,
+        "consumption": [
+            {
+                "id": 3,
+                "name": "Carne Bovina",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 335,
+                "month": "2024-01"
+            },
+            {
+                "id": 3,
+                "name": "Carne Bovina",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 286,
+                "month": "2024-02"
+            },
+            {
+                "id": 3,
+                "name": "Carne Bovina",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 320,
+                "month": "2024-03"
+            },
+            {
+                "id": 3,
+                "name": "Carne Bovina",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 348,
+                "month": "2024-04"
+            },
+            {
+                "id": 3,
+                "name": "Carne Bovina",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 315,
+                "month": "2024-05"
+            },
+            {
+                "id": 3,
+                "name": "Carne Bovina",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 303,
+                "month": "2024-06"
+            },
+            {
+                "id": 3,
+                "name": "Carne Bovina",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 358,
+                "month": "2024-07"
+            },
+            {
+                "id": 3,
+                "name": "Carne Bovina",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 181,
+                "month": "2024-08"
+            },
+            {
+                "id": 3,
+                "name": "Carne Bovina",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 303,
+                "month": "2024-09"
+            },
+            {
+                "id": 3,
+                "name": "Carne Bovina",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 246,
+                "month": "2024-10"
+            },
+            {
+                "id": 3,
+                "name": "Carne Bovina",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 264,
+                "month": "2024-11"
+            },
+            {
+                "id": 3,
+                "name": "Carne Bovina",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 269,
+                "month": "2024-12"
+            },
+            {
+                "id": 3,
+                "name": "Carne Bovina",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 285,
+                "month": "2025-01"
+            },
+            {
+                "id": 3,
+                "name": "Carne Bovina",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 267,
+                "month": "2025-02"
+            },
+            {
+                "id": 3,
+                "name": "Carne Bovina",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 261,
+                "month": "2025-03"
+            },
+            {
+                "id": 3,
+                "name": "Carne Bovina",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 385,
+                "month": "2025-04"
+            },
+            {
+                "id": 3,
+                "name": "Carne Bovina",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 213,
+                "month": "2025-05"
+            },
+            {
+                "id": 3,
+                "name": "Carne Bovina",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 451,
+                "month": "2025-06"
+            },
+            {
+                "id": 3,
+                "name": "Carne Bovina",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 222,
+                "month": "2025-07"
+            },
+            {
+                "id": 3,
+                "name": "Carne Bovina",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 424,
+                "month": "2025-08"
+            },
+            {
+                "id": 3,
+                "name": "Carne Bovina",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 428,
+                "month": "2025-09"
+            },
+            {
+                "id": 3,
+                "name": "Carne Bovina",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 200,
+                "month": "2025-10"
+            },
+            {
+                "id": 3,
+                "name": "Carne Bovina",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 350,
+                "month": "2025-11"
+            },
+            {
+                "id": 3,
+                "name": "Carne Bovina",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 279,
+                "month": "2025-12"
+            },
+            {
+                "id": 6,
+                "name": "Frango",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 159,
+                "month": "2024-01"
+            },
+            {
+                "id": 6,
+                "name": "Frango",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 154,
+                "month": "2024-02"
+            },
+            {
+                "id": 6,
+                "name": "Frango",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 167,
+                "month": "2024-03"
+            },
+            {
+                "id": 6,
+                "name": "Frango",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 177,
+                "month": "2024-04"
+            },
+            {
+                "id": 6,
+                "name": "Frango",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 127,
+                "month": "2024-05"
+            },
+            {
+                "id": 6,
+                "name": "Frango",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 186,
+                "month": "2024-06"
+            },
+            {
+                "id": 6,
+                "name": "Frango",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 186,
+                "month": "2024-07"
+            },
+            {
+                "id": 6,
+                "name": "Frango",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 176,
+                "month": "2024-08"
+            },
+            {
+                "id": 6,
+                "name": "Frango",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 207,
+                "month": "2024-09"
+            },
+            {
+                "id": 6,
+                "name": "Frango",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 187,
+                "month": "2024-10"
+            },
+            {
+                "id": 6,
+                "name": "Frango",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 182,
+                "month": "2024-11"
+            },
+            {
+                "id": 6,
+                "name": "Frango",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 139,
+                "month": "2024-12"
+            },
+            {
+                "id": 6,
+                "name": "Frango",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 190,
+                "month": "2025-01"
+            },
+            {
+                "id": 6,
+                "name": "Frango",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 221,
+                "month": "2025-02"
+            },
+            {
+                "id": 6,
+                "name": "Frango",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 133,
+                "month": "2025-03"
+            },
+            {
+                "id": 6,
+                "name": "Frango",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 196,
+                "month": "2025-04"
+            },
+            {
+                "id": 6,
+                "name": "Frango",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 142,
+                "month": "2025-05"
+            },
+            {
+                "id": 6,
+                "name": "Frango",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 162,
+                "month": "2025-06"
+            },
+            {
+                "id": 6,
+                "name": "Frango",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 140,
+                "month": "2025-07"
+            },
+            {
+                "id": 6,
+                "name": "Frango",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 153,
+                "month": "2025-08"
+            },
+            {
+                "id": 6,
+                "name": "Frango",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 213,
+                "month": "2025-09"
+            },
+            {
+                "id": 6,
+                "name": "Frango",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 171,
+                "month": "2025-10"
+            },
+            {
+                "id": 6,
+                "name": "Frango",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 156,
+                "month": "2025-11"
+            },
+            {
+                "id": 6,
+                "name": "Frango",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 145,
+                "month": "2025-12"
+            },
+            {
+                "id": 7,
+                "name": "Linguiça",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 157,
+                "month": "2024-01"
+            },
+            {
+                "id": 7,
+                "name": "Linguiça",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 81,
+                "month": "2024-02"
+            },
+            {
+                "id": 7,
+                "name": "Linguiça",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 121,
+                "month": "2024-03"
+            },
+            {
+                "id": 7,
+                "name": "Linguiça",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 124,
+                "month": "2024-04"
+            },
+            {
+                "id": 7,
+                "name": "Linguiça",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 152,
+                "month": "2024-05"
+            },
+            {
+                "id": 7,
+                "name": "Linguiça",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 144,
+                "month": "2024-06"
+            },
+            {
+                "id": 7,
+                "name": "Linguiça",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 114,
+                "month": "2024-07"
+            },
+            {
+                "id": 7,
+                "name": "Linguiça",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 138,
+                "month": "2024-08"
+            },
+            {
+                "id": 7,
+                "name": "Linguiça",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 91,
+                "month": "2024-09"
+            },
+            {
+                "id": 7,
+                "name": "Linguiça",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 122,
+                "month": "2024-10"
+            },
+            {
+                "id": 7,
+                "name": "Linguiça",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 96,
+                "month": "2024-11"
+            },
+            {
+                "id": 7,
+                "name": "Linguiça",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 83,
+                "month": "2024-12"
+            },
+            {
+                "id": 7,
+                "name": "Linguiça",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 116,
+                "month": "2025-01"
+            },
+            {
+                "id": 7,
+                "name": "Linguiça",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 129,
+                "month": "2025-02"
+            },
+            {
+                "id": 7,
+                "name": "Linguiça",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 74,
+                "month": "2025-03"
+            },
+            {
+                "id": 7,
+                "name": "Linguiça",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 89,
+                "month": "2025-04"
+            },
+            {
+                "id": 7,
+                "name": "Linguiça",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 98,
+                "month": "2025-05"
+            },
+            {
+                "id": 7,
+                "name": "Linguiça",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 107,
+                "month": "2025-06"
+            },
+            {
+                "id": 7,
+                "name": "Linguiça",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 119,
+                "month": "2025-07"
+            },
+            {
+                "id": 7,
+                "name": "Linguiça",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 126,
+                "month": "2025-08"
+            },
+            {
+                "id": 7,
+                "name": "Linguiça",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 115,
+                "month": "2025-09"
+            },
+            {
+                "id": 7,
+                "name": "Linguiça",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 147,
+                "month": "2025-10"
+            },
+            {
+                "id": 7,
+                "name": "Linguiça",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 148,
+                "month": "2025-11"
+            },
+            {
+                "id": 7,
+                "name": "Linguiça",
+                "category": "carnes",
+                "unit": "kg",
+                "quantity": 106,
+                "month": "2025-12"
+            }
+        ]
+    }
+]

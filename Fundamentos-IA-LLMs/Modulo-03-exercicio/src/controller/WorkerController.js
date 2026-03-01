@@ -28,10 +28,10 @@ export class WorkerController {
             this.#alreadyTrained = true;
         });
 
-        this.#events.onRecommend((data) => {
+        this.#events.onPredict((data) => {
             if (!this.#alreadyTrained) return
 
-            this.triggerRecommend(data);
+            this.triggerPredict(data);
 
         });
 
@@ -63,17 +63,17 @@ export class WorkerController {
             if (event.data.type === workerEvents.trainingLog) {
                 this.#events.dispatchTFVisLogs(event.data);
             }
-            if (event.data.type === workerEvents.recommend) {
-                this.#events.dispatchRecommendationsReady(event.data);
+            if (event.data.type === workerEvents.predict) {
+                this.#events.dispatchPredictionsReady(event.data);
             }
         };
     }
 
-    triggerTrain(users) {
-        this.#worker.postMessage({ action: workerEvents.trainModel, users });
+    triggerTrain(restaurants) {
+        this.#worker.postMessage({ action: workerEvents.trainModel, restaurants });
     }
 
-    triggerRecommend(user) {
-        this.#worker.postMessage({ action: workerEvents.recommend, user });
+    triggerPredict({ restaurant, targetMonth }) {
+        this.#worker.postMessage({ action: workerEvents.predict, restaurant, targetMonth });
     }
 }

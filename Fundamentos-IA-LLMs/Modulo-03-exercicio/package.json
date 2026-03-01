@@ -1,18 +1,20 @@
 {
-    "name": "ecommerce-recomendations-with-ml",
+    "name": "restaurant-purchase-recommendation-system",
     "version": "1.0.0",
-    "description": "An e-commerce recommendation system with TensorFlow.js",
+    "description": "Sistema de recomendação de compras para restaurantes com TensorFlow.js para prever quantidades de ingredientes",
     "main": "index.js",
     "type": "module",
     "scripts": {
-        "start": "browser-sync -w . --server --files 'index.html, data/*.json, js/*.js' --port 3000",
+        "start": "browser-sync -w . --server --files 'index.html, data/*.json, src/**/*.js' --port 3000",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [
-        "ecommerce",
+        "restaurant",
         "tensorflow",
         "recommendation",
-        "javascript"
+        "javascript",
+        "machine-learning",
+        "purchase-forecasting"
     ],
     "author": "",
     "license": "ISC",

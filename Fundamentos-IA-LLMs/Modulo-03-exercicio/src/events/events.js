@@ -15,25 +15,25 @@ export default class Events {
         document.dispatchEvent(event);
     }
 
-    static onRecommend(callback) {
-        document.addEventListener(events.recommend, (event) => {
+    static onPredict(callback) {
+        document.addEventListener(events.predict, (event) => {
             return callback(event.detail);
         });
     }
-    static dispatchRecommend(data) {
-        const event = new CustomEvent(events.recommend, {
+    static dispatchPredict(data) {
+        const event = new CustomEvent(events.predict, {
             detail: data
         });
         document.dispatchEvent(event);
     }
 
-    static onRecommendationsReady(callback) {
-        document.addEventListener(events.recommendationsReady, (event) => {
+    static onPredictionsReady(callback) {
+        document.addEventListener(events.predictionsReady, (event) => {
             return callback(event.detail);
         });
     }
-    static dispatchRecommendationsReady(data) {
-        const event = new CustomEvent(events.recommendationsReady, {
+    static dispatchPredictionsReady(data) {
+        const event = new CustomEvent(events.predictionsReady, {
             detail: data
         });
         document.dispatchEvent(event);
@@ -90,59 +90,53 @@ export default class Events {
     }
 
 
-    static onUserSelected(callback) {
-        document.addEventListener(events.userSelected, (event) => {
+    static onRestaurantSelected(callback) {
+        document.addEventListener(events.restaurantSelected, (event) => {
             return callback(event.detail);
         });
     }
-    static dispatchUserSelected(data) {
-        const event = new CustomEvent(events.userSelected, {
+    static dispatchRestaurantSelected(data) {
+        const event = new CustomEvent(events.restaurantSelected, {
             detail: data
         });
         document.dispatchEvent(event);
     }
 
-    static onUsersUpdated(callback) {
-        document.addEventListener(events.usersUpdated, (event) => {
+    static onRestaurantsUpdated(callback) {
+        document.addEventListener(events.restaurantsUpdated, (event) => {
             return callback(event.detail);
         });
     }
-    static dispatchUsersUpdated(data) {
-        const event = new CustomEvent(events.usersUpdated, {
+    static dispatchRestaurantsUpdated(data) {
+        const event = new CustomEvent(events.restaurantsUpdated, {
             detail: data
         });
         document.dispatchEvent(event);
     }
 
 
-    static onPurchaseAdded(callback) {
-        document.addEventListener(events.purchaseAdded, (event) => {
+    static onConsumptionAdded(callback) {
+        document.addEventListener(events.consumptionAdded, (event) => {
             return callback(event.detail);
         });
     }
-    static dispatchPurchaseAdded(data) {
-        const event = new CustomEvent(events.purchaseAdded, {
+    static dispatchConsumptionAdded(data) {
+        const event = new CustomEvent(events.consumptionAdded, {
             detail: data
         });
         document.dispatchEvent(event);
     }
 
-    static onPurchaseRemoved(callback) {
-        document.addEventListener(events.purchaseRemoved, (event) => {
+    static onConsumptionRemoved(callback) {
+        document.addEventListener(events.consumptionRemoved, (event) => {
             return callback(event.detail);
         });
     }
 
-    static dispatchEventPurchaseRemoved(data) {
-        const event = new CustomEvent(events.purchaseRemoved, {
+    static dispatchConsumptionRemoved(data) {
+        const event = new CustomEvent(events.consumptionRemoved, {
             detail: data
         });
         document.dispatchEvent(event);
-    }
-
-    static onProgressUpdate(callback) {
-        document.addEventListener(events.modelProgressUpdate, (event) => {
-            return callback(event.detail);
-        });
     }
 }

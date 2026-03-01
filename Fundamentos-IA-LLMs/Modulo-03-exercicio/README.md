@@ -1,39 +1,43 @@
-# E-commerce Recommendation System
+# Sistema de Recomendação de Compras para Restaurantes
 
-A web application that displays user profiles and product listings, with the ability to track user purchases for future machine learning recommendations using TensorFlow.js.
+Uma aplicação web que exibe perfis de restaurantes e listagens de ingredientes, com a capacidade de rastrear o consumo histórico de ingredientes para recomendar quantidades de compra para os meses seguintes usando TensorFlow.js.
 
-## Project Structure
+## Estrutura do Projeto
 
-- `index.html` - Main HTML file for the application
-- `index.js` - Entry point for the application
-- `view/` - Contains classes for managing the DOM and templates
-- `controller/` - Contains controllers to connect views and services
-- `service/` - Contains business logic for data handling
-- `data/` - Contains JSON files with user and product data
+- `index.html` - Arquivo HTML principal da aplicação
+- `src/index.js` - Ponto de entrada da aplicação
+- `src/view/` - Contém classes para gerenciar o DOM e templates
+- `src/controller/` - Contém controladores para conectar views e serviços
+- `src/service/` - Contém lógica de negócio para manipulação de dados
+- `src/data/` - Contém arquivos JSON com dados de restaurantes e ingredientes
+- `src/workers/` - Contém o worker de treinamento do modelo de ML
 
-## Setup and Run
+## Configuração e Execução
 
-1. Install dependencies:
+1. Instale as dependências:
 ```
 npm install
 ```
 
-2. Start the application:
+2. Inicie a aplicação:
 ```
 npm start
 ```
 
-3. Open your browser and navigate to `http://localhost:8080`
+3. Abra seu navegador e navegue para `http://localhost:3000`
 
-## Features
+## Funcionalidades
 
-- User profile selection with details display
-- Past purchase history display
-- Product listing with "Buy Now" functionality
-- Purchase tracking using sessionStorage
+- Seleção de perfil de restaurante com exibição de detalhes
+- Exibição do histórico de consumo de ingredientes
+- Listagem de ingredientes com funcionalidade de adicionar consumo
+- Rastreamento de consumo usando sessionStorage
+- Modelo de Machine Learning para prever quantidades de compra para meses futuros
+- Visualização de recomendações de quantidade por ingrediente
 
-## Future Enhancements
+## Melhorias Futuras
 
-- TensorFlow.js-based recommendation engine
-- User similarity analysis
-- Product recommendation based on purchase history
+- Análise de sazonalidade para previsões mais precisas
+- Integração com sistemas de estoque
+- Alertas de estoque baixo baseados em previsões
+- Análise de tendências de consumo

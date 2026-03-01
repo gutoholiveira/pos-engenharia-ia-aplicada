@@ -1,16 +1,16 @@
 export class ModelController {
     #modelView;
-    #userService;
+    #restaurantService;
     #events;
-    #currentUser = null;
+    #currentRestaurant = null;
     #alreadyTrained = false;
     constructor({
         modelView,
-        userService,
+        restaurantService,
         events,
     }) {
         this.#modelView = modelView;
-        this.#userService = userService;
+        this.#restaurantService = restaurantService;
         this.#events = events;
 
         this.init();
@@ -26,23 +26,23 @@ export class ModelController {
 
     setupCallbacks() {
         this.#modelView.registerTrainModelCallback(this.handleTrainModel.bind(this));
-        this.#modelView.registerRunRecommendationCallback(this.handleRunRecommendation.bind(this));
+        this.#modelView.registerRunPredictionCallback(this.handleRunPrediction.bind(this));
 
-        this.#events.onUserSelected((user) => {
-            this.#currentUser = user;
+        this.#events.onRestaurantSelected((restaurant) => {
+            this.#currentRestaurant = restaurant;
             if (!this.#alreadyTrained) return
-            this.#modelView.enableRecommendButton();
+            this.#modelView.enablePredictButton();
         });
 
         this.#events.onTrainingComplete(() => {
             this.#alreadyTrained = true;
-            if (!this.#currentUser) return
-            this.#modelView.enableRecommendButton();
+            if (!this.#currentRestaurant) return
+            this.#modelView.enablePredictButton();
         })
 
-        this.#events.onUsersUpdated(
+        this.#events.onRestaurantsUpdated(
             async (...data) => {
-                return this.refreshUsersPurchaseData(...data);
+                return this.refreshRestaurantsConsumptionData(...data);
             }
         );
         this.#events.onProgressUpdate(
@@ -55,21 +55,25 @@ export class ModelController {
 
 
     async handleTrainModel() {
-        const users = await this.#userService.getUsers();
+        const restaurants = await this.#restaurantService.getRestaurants();
 
-        this.#events.dispatchTrainModel(users);
+        this.#events.dispatchTrainModel(restaurants);
     }
 
     handleTrainingProgressUpdate(progress) {
         this.#modelView.updateTrainingProgress(progress);
     }
-    async handleRunRecommendation() {
-        const currentUser = this.#currentUser;
-        const updatedUser = await this.#userService.getUserById(currentUser.id);
-        this.#events.dispatchRecommend(updatedUser);
+    async handleRunPrediction() {
+        const currentRestaurant = this.#currentRestaurant;
+        const updatedRestaurant = await this.#restaurantService.getRestaurantById(currentRestaurant.id);
+        // Get next month for prediction
+        const nextMonth = new Date();
+        nextMonth.setMonth(nextMonth.getMonth() + 1);
+        const targetMonth = nextMonth.toISOString().slice(0, 7);
+        this.#events.dispatchPredict({ restaurant: updatedRestaurant, targetMonth });
     }
 
-    async refreshUsersPurchaseData({ users }) {
-        this.#modelView.renderAllUsersPurchases(users);
+    async refreshRestaurantsConsumptionData({ restaurants }) {
+        this.#modelView.renderAllRestaurantsConsumption(restaurants);
     }
 }

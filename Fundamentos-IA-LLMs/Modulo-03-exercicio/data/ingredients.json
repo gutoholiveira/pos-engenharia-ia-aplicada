@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "name": "Arroz",
+        "category": "grãos",
+        "unit": "kg",
+        "averagePrice": 8.50
+    },
+    {
+        "id": 2,
+        "name": "Feijão",
+        "category": "grãos",
+        "unit": "kg",
+        "averagePrice": 12.00
+    },
+    {
+        "id": 3,
+        "name": "Carne Bovina",
+        "category": "carnes",
+        "unit": "kg",
+        "averagePrice": 35.00
+    },
+    {
+        "id": 4,
+        "name": "Massa",
+        "category": "massas",
+        "unit": "kg",
+        "averagePrice": 6.50
+    },
+    {
+        "id": 5,
+        "name": "Tomate",
+        "category": "vegetais",
+        "unit": "kg",
+        "averagePrice": 9.00
+    },
+    {
+        "id": 6,
+        "name": "Frango",
+        "category": "carnes",
+        "unit": "kg",
+        "averagePrice": 18.00
+    },
+    {
+        "id": 7,
+        "name": "Linguiça",
+        "category": "carnes",
+        "unit": "kg",
+        "averagePrice": 22.00
+    }
+]

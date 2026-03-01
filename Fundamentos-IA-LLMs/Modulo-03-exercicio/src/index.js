@@ -1,23 +1,23 @@
-import { UserController } from './controller/UserController.js';
-import { ProductController } from './controller/ProductController.js';
+import { RestaurantController } from './controller/RestaurantController.js';
+import { IngredientController } from './controller/IngredientController.js';
 import { ModelController } from './controller/ModelTrainingController.js';
 import { TFVisorController } from './controller/TFVisorController.js';
 import { TFVisorView } from './view/TFVisorView.js';
-import { UserService } from './service/UserService.js';
-import { ProductService } from './service/ProductService.js';
-import { UserView } from './view/UserView.js';
-import { ProductView } from './view/ProductView.js';
+import { RestaurantService } from './service/RestaurantService.js';
+import { IngredientService } from './service/IngredientService.js';
+import { RestaurantView } from './view/RestaurantView.js';
+import { IngredientView } from './view/IngredientView.js';
 import { ModelView } from './view/ModelTrainingView.js';
 import Events from './events/events.js';
 import { WorkerController } from './controller/WorkerController.js';
 
 // Create shared services
-const userService = new UserService();
-const productService = new ProductService();
+const restaurantService = new RestaurantService();
+const ingredientService = new IngredientService();
 
 // Create views
-const userView = new UserView();
-const productView = new ProductView();
+const restaurantView = new RestaurantView();
+const ingredientView = new IngredientView();
 const modelView = new ModelView();
 const tfVisorView = new TFVisorView();
 const mlWorker = new Worker('/src/workers/modelTrainingWorker.js', { type: 'module' });
@@ -28,13 +28,13 @@ const w = WorkerController.init({
     events: Events
 });
 
-const users = await userService.getDefaultUsers();
-w.triggerTrain(users);
+const restaurants = await restaurantService.getDefaultRestaurants();
+w.triggerTrain(restaurants);
 
 
 ModelController.init({
     modelView,
-    userService,
+    restaurantService,
     events: Events,
 });
 
@@ -43,25 +43,24 @@ TFVisorController.init({
     events: Events,
 });
 
-ProductController.init({
-    productView,
-    userService,
-    productService,
+IngredientController.init({
+    ingredientView,
+    restaurantService,
+    ingredientService,
     events: Events,
 });
 
 
-const userController = UserController.init({
-    userView,
-    userService,
-    productService,
+const restaurantController = RestaurantController.init({
+    restaurantView,
+    restaurantService,
     events: Events,
 });
 
 
-userController.renderUsers({
+restaurantController.renderRestaurants({
     "id": 99,
-    "name": "Josézin da Silva",
-    "age": 30,
-    "purchases": []
+    "name": "Restaurante Novo",
+    "capacity": 100,
+    "consumption": []
 });
